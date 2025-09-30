@@ -1,5 +1,6 @@
 // components/Card.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 export const Card = ({ characters, loading }) => {
   if (loading) {
@@ -16,17 +17,20 @@ export const Card = ({ characters, loading }) => {
       className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
     >
       {characters.map((char) => (
-        <div
+        <Link
+          to={`/character/${char.id}`}
           key={char.id}
-          className="bg-[lightblue] max-w-[180px] h-[250px] rounded-lg shadow-md flex flex-col items-center px-4 py-3"
+          className="bg-[lightblue] max-w-[180px] h-[250px] rounded-lg shadow-md flex flex-col items-center px-4 py-3 hover:shadow-lg transition-shadow"
         >
-          <img
-            src={char.image}
-            alt={char.name}
-            className="w-full h-[180px] object-cover rounded-md"
-          />
+          <div className="relative w-full h-[180px] rounded-md overflow-hidden cursor-pointer">
+            <img
+              src={char.image}
+              alt={char.name}
+              className="w-full h-full object-cover"
+            />
+          </div>
           <p className="text-center font-semibold mt-3 text-sm">{char.name}</p>
-        </div>
+        </Link>
       ))}
     </div>
   );

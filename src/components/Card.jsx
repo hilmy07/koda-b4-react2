@@ -2,6 +2,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
+/**
+ * Komponen kartu karakter.
+ *
+ * @param {{ characters: Array<{ id: number, name: string, image: string }>, loading: boolean }} props
+ * @returns {JSX.Element}
+ */
 export const Card = ({ characters, loading }) => {
   if (loading) {
     return <p className="text-center text-gray-600">Loading...</p>;

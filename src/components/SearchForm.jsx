@@ -1,6 +1,16 @@
 // components/SearchForm.jsx
 import React from "react";
 
+/**
+ * Komponen form pencarian karakter.
+ *
+ * @param {Object} props
+ * @param {string} props.value - Nilai input saat ini.
+ * @param {(e: React.ChangeEvent<HTMLInputElement>) => void} props.onChange - Handler untuk event perubahan input.
+ * @param {(e: React.FormEvent<HTMLFormElement>) => void} props.onSubmit - Handler untuk event submit form.
+ * @returns {JSX.Element}
+ */
+
 export const SearchForm = ({ value, onChange, onSubmit }) => {
   return (
     <form onSubmit={onSubmit} className="my-6 flex gap-2">

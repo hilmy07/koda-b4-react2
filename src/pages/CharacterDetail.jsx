@@ -49,7 +49,7 @@ const CharacterDetail = () => {
         <p className="mb-4">{error}</p>
         <Link
           to="/"
-          className="text-blue-600 underline hover:text-blue-800 transition"
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition"
         >
           Back to Home
         </Link>
@@ -69,7 +69,7 @@ const CharacterDetail = () => {
       <div className="flex flex-col justify-between">
         <Link
           to="/"
-          className="text-blue-600 underline mb-4 inline-block hover:text-blue-800 transition"
+          className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition w-fit"
         >
           &larr; Back to Home
         </Link>

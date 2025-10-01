@@ -16,7 +16,7 @@ function Homepage() {
       if (!res.ok) throw new Error("Gagal fetch");
       const data = await res.json();
 
-      // bikin fungsi delay 3 detik
+      // bikin fungsi delay 1 detik
       await new Promise((resolve) => setTimeout(resolve, 1000));
 
       if (searchQuery) {
